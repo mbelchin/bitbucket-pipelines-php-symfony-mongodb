@@ -75,7 +75,7 @@ Si consideras que algunas cosas podrían mejorarse o si conoces alguna otra herr
 
 ## Contribuir
 
-1. Haz un fork (<https://github.com/mbelchin/git-messages-format/fork>)
+1. Haz un fork 1. (<https://github.com/mbelchin/bitbucket-pipelines-php-symfony-mongodb/fork>)
 2. Crea una nueva rama (`git checkout -b feature/fooBar`)
 3. Haz un commit de tus cambios (`git commit -am '<type>(scope): add some fooBar'`)
 4. Haz push de tu rama (`git push origin feature/fooBar`)
