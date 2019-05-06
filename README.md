@@ -9,6 +9,35 @@
 
 Bitbucket pipeline configuration to run phpunit tests on every commit to a PHP, Symfony project using MongoDB.
 
+## Documentation
+
+In this repository you'll find the file `bitbucket-pipelines.yml` responsible to pull the docker image and run the pipeline.
+
+You'll also find `Dockerfile` the file used to create our custom image.
+
+In our case we need PHP 5.6 and MongoDB 3.2. In the same image you'll find installed composer for installing the dependencies in your PHP+Symfony project and PHPUnit 5.6 to run PHP 5.6 tests.
+
+# Create your own image
+
+You can use the `Dockerfile` as a base and modify it for your needs.
+
+# Build the image
+
+Once you have your image ready, buid it:
+
+`docker build -t <your-docker-account>/php-mongodb .`
+
+# Run the image locally
+
+`docker run -i -t <your-docker-account>/php-mongodb /bin/bash
+
+# Push the image to Docker hub
+
+`docker login` <-- use your own credentials
+
+`docker push <your-docker-account>/php-mongodb`
+
+
 ## Author
 
 [Moisés Belchín](https://moisesbm.wordpress.com)  
