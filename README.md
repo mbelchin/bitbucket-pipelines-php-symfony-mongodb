@@ -19,23 +19,35 @@ In our case we need PHP 5.6 and MongoDB 3.2. In the same image you'll find insta
 
 ### Create your own image
 
-You can use the `Dockerfile` as a base and modify it for your needs.
+You can use the `Dockerfile` available as a base for your custom image and modify it accordingly. For instance, using PHP 7:
+
+```
+FROM php:7.1.1
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    mongodb \
+    mongodb-server \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
+```
 
 ### Build the image
 
 Once you have your image ready, buid it:
 
-`docker build -t <your-docker-account>/php-mongodb .`
+```docker build -t <your-docker-account>/php-mongodb .```
 
 ### Run the image locally
 
-`docker run -i -t <your-docker-account>/php-mongodb /bin/bash
+```docker run -i -t <your-docker-account>/php-mongodb /bin/bash```
 
 ### Push the image to Docker hub
 
-`docker login` <-- use your own credentials
+1. Use your credentials to login in Docker Hub.
+```docker login```
 
-`docker push <your-docker-account>/php-mongodb`
+2. Push your new image.
+```docker push <your-docker-account>/php-mongodb```
 
 
 ## Author
