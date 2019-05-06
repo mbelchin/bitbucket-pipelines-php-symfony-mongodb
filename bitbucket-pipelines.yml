@@ -1,0 +1,21 @@
+# This is a sample build configuration for PHP/Symfony/MongoDB.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: moisesbelchin/php-mongodb
+
+pipelines:
+  default:
+    - step:
+        name: Build and Test
+        script: # Modify the commands below to build your repository.
+          # start mongodb service.
+          mongod --config /etc/mongod.conf --fork
+          # app/config
+          - cp app/config/parameters.yml.dev app/config/parameters.yml
+          # installs deps.
+          - composer install
+          # run unit tests.
+          - bin/test -c app --exclude-group=rest
+          # run integration tests.
+          - bin/test -c app --group=rest
