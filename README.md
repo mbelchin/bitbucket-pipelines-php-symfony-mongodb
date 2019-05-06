@@ -35,19 +35,29 @@ RUN apt-get update \
 
 Once you have your image ready, buid it:
 
-```docker build -t <your-docker-account>/php-mongodb .```
+```
+docker build -t <your-docker-account>/php-mongodb .
+```
 
 ### Run the image locally
 
-```docker run -i -t <your-docker-account>/php-mongodb /bin/bash```
+```
+docker run -i -t <your-docker-account>/php-mongodb /bin/bash
+```
 
 ### Push the image to Docker hub
 
 1. Use your credentials to login in Docker Hub.
-```docker login```
+
+```
+docker login
+```
 
 2. Push your new image.
-```docker push <your-docker-account>/php-mongodb```
+
+```
+docker push <your-docker-account>/php-mongodb
+```
 
 
 ## Author
