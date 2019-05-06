@@ -9,6 +9,56 @@
 
 Configuración de Bitbucket pipiles para ejecutar test PHPUnit en cada commit para un project que utiliza PHP, Symofony y MongoDB.
 
+## Documentación
+
+En este repositorio encontrarás el fichero `bitbucket-pipelines.yml` responsible de descargar la imagen de docker y ejecutar el pipeline de BitBucket.
+
+También encontrarás el fichero `Dockerfile` utilizado para crear la imagen a medida de este proyecto.
+
+En nuestro caso necesitábamos PHP 5.6 y MongoDB 3.2. En la misma imagen encontrarás instalado `composer` para instalar las dependencias de tus proyectos PHP+Symfony y también tendrás PHPUnit 5.6 necesario para ejecutar los tests de PHP 5.6.
+
+### Crea tu propia imagen
+
+Puedes utilizar el fichero `Dockerfile` disponible como imagen base y modificarlo según tus necesidades. Por ejemplo, usar PHP 7:
+
+```
+FROM php:7.1.1
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    mongodb \
+    mongodb-server \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
+```
+
+### Construye tu propia imagen
+
+Cuando tengas la imagen creada, puedes construirla con este comando:
+
+```
+docker build -t <your-docker-account>/php-mongodb .
+```
+
+### Ejecuta la imagen localmente
+
+```
+docker run -i -t <your-docker-account>/php-mongodb /bin/bash
+```
+
+### Sube tu imagen a Docker hub
+
+1. Utiliza tus credenciales para hacer login en Docker Hub.
+
+```
+docker login
+```
+
+2. Sube tu imagen, ejecutando este comando:
+
+```
+docker push <your-docker-account>/php-mongodb
+```
+
 ## Autor
 
 [Moisés Belchín](https://moisesbm.wordpress.com)  
