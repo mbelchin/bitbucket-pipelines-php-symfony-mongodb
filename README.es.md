@@ -1,4 +1,4 @@
-# PHP, Symfony y MongDB para BitBucket Pipelines
+# PHP, Symfony y MongoDB para BitBucket Pipelines
 > Configuración de PHP, Symfony y MongoDB para utilizar con Bitbucket pipelines y ejecutar tests en cada commit
 
 ![GitHub](https://img.shields.io/github/license/mbelchin/bitbucket-pipelines-php-symfony-mongodb.svg)

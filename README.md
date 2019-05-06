@@ -1,4 +1,4 @@
-# PHP, Symfony and MongDB for BitBucket Pipelines
+# PHP, Symfony and MongoDB for BitBucket Pipelines
 > PHP, Symfony and MongoDB configuration for Bitbucket pipelines and run tests on every commit
 
 ![GitHub](https://img.shields.io/github/license/mbelchin/bitbucket-pipelines-php-symfony-mongodb.svg)
@@ -70,7 +70,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 ## Discussion
 
-This project was created to find a simple way to share same BitBucket pipeline configuration to be used in projects using PHP and Symfony which need MongDB as database to run phpunit tests.
+This project was created to find a simple way to share same BitBucket pipeline configuration to be used in projects using PHP and Symfony which need MongoDB as database to run phpunit tests.
 
 If you consider some things could be improved or you know another simpler, easier configurable tools, please open a discussion thread so all of us could benefit from those improvements.
 
