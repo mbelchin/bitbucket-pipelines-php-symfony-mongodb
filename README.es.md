@@ -63,8 +63,6 @@ _Para obtener una información más detallada acerca de este paquete, por favor,
 
 ## Autor
 
-## Autor
-
 [Moisés Belchín](https://moisesbm.wordpress.com)  
 [@moises_b_m](https://twitter.com/moises_b_m)  
 [https://github.com/mbelchin/](https://github.com/mbelchin/)  
