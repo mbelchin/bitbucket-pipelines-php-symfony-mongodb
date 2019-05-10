@@ -59,6 +59,7 @@ docker login
 docker push <your-docker-account>/php-mongodb
 ```
 
+_For a detailed explanation, please refer to: [https://moisesbm.wordpress.com/2019/05/08/bitbucket-pipeline-configuration-for-php-mongodb-and-symfony/](https://moisesbm.wordpress.com/2019/05/08/bitbucket-pipeline-configuration-for-php-mongodb-and-symfony/)_
 
 ## Author
 
